@@ -4,6 +4,7 @@ const API='https://pham-thanh-nhue-crm.hoctap-thanhnhue.chatgpt.site/api';
 const el=id=>document.getElementById(id), login=el('login-form');
 let session='',username='',rows=[],selected=null,setupCode='';
 try{session=sessionStorage.getItem('ptn-crm-session')||''}catch{}
+window.addEventListener('hashchange',()=>{if(/^[a-f0-9]{64}$/.test(new URLSearchParams(location.hash.slice(1)).get('thiet-lap')||''))location.reload()});
 const hash=new URLSearchParams(location.hash.slice(1));if(/^[a-f0-9]{64}$/.test(hash.get('thiet-lap')||'')){setupCode=hash.get('thiet-lap');history.replaceState(null,'',location.pathname);el('login-title').textContent='Tạo tài khoản của chị';el('login-description').textContent='Đặt tên tài khoản và mật khẩu để sử dụng CRM.';el('setup-fields').hidden=false;login.elements.confirm.required=true;login.elements.password.minLength=15;login.elements.password.autocomplete='new-password';el('login-submit').textContent='Tạo tài khoản quản trị';}
 function message(id,text='',error=false){const node=el(id);node.textContent=text;node.className=text?(error?'message-error':'message-success'):'';}
 function setSession(data){session=data.token;username=data.username;try{sessionStorage.setItem('ptn-crm-session',session)}catch{}}
