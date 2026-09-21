@@ -5,7 +5,7 @@ const status=document.querySelector('#form-status'),button=form.querySelector('b
 const quick=document.querySelector('.quick-contact');
 if(quick&&'IntersectionObserver' in window)new IntersectionObserver(entries=>quick.classList.toggle('is-form-visible',entries[0].isIntersecting),{threshold:0.12}).observe(form);
 const config=window.PTN_BACKEND||{};
-if(config.url){button.disabled=false;const note=document.querySelector('#form-connection-note');if(note)note.textContent='Thông tin chỉ được dùng để tiếp nhận yêu cầu và liên hệ với bạn.';}
+if(config.url){button.disabled=false;const note=document.querySelector('#form-connection-note');if(note)note.textContent='Tôi sử dụng thông tin bạn gửi để tiếp nhận nhu cầu và liên hệ với bạn.';}
 const date=form.elements.appointment, email=form.elements.email, channel=form.elements.channel;
 function localDate(){return new Date().toLocaleString('sv-SE',{timeZone:'Asia/Ho_Chi_Minh'}).slice(0,16).replace(' ','T')}
 if(date)date.min=localDate();
@@ -20,8 +20,8 @@ form.addEventListener('submit',async e=>{
  status.dataset.state='loading';status.textContent='Đang gửi yêu cầu…';button.disabled=true;
  try{
   const result=await window.ptnRequest({action:'submit',kind:form.dataset.kind,...data,consent:data.consent==='on',requestId});
-  status.dataset.state='success';status.textContent='Đã tiếp nhận yêu cầu. Phạm Thanh Nhuệ sẽ liên hệ qua thông tin bạn cung cấp. Mã yêu cầu: '+result.reference+'.';form.reset();requestId=crypto.randomUUID();if(email)email.required=false;
- }catch(error){status.dataset.state='error';status.textContent=error.name==='TimeoutError'?'Chưa xác nhận được kết quả gửi. Bạn có thể thử lại; hệ thống sẽ tránh ghi trùng yêu cầu.':error.message||'Kết nối bị gián đoạn. Vui lòng thử lại.';}
+  status.dataset.state='success';status.textContent='Cảm ơn bạn đã chia sẻ. Yêu cầu của bạn đã được lưu. Tôi sẽ liên hệ qua thông tin bạn cung cấp. Mã yêu cầu: '+result.reference+'.';form.reset();requestId=crypto.randomUUID();if(email)email.required=false;
+ }catch(error){status.dataset.state='error';status.textContent=error.name==='TimeoutError'?'Chưa xác nhận được kết quả gửi. Bạn vui lòng thử lại hoặc liên hệ với tôi qua Zalo.':error.message||'Kết nối bị gián đoạn. Bạn vui lòng thử lại.';}
  finally{button.disabled=false;}
 });
 })();
