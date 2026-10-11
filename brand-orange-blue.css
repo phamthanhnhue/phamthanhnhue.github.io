@@ -23,3 +23,5 @@ a.text-link,.contact-direct a,.brand-intro-copy .text-link{color:#0072bc}.hero a
 :focus-visible{outline:3px solid #f58220;outline-offset:4px}.form-panel input:focus,.form-panel textarea:focus{outline:2px solid #0072bc;outline-offset:2px}
 .primary{background:#0072bc;border-color:#0072bc;color:#fff}.message-error{color:#00588f;background:#fff0e3;border-left:4px solid #f58220}.message-success{color:#00588f;background:#f0f8fd;border-left:4px solid #0072bc}
 @media(max-width:760px){.hero h1{font-size:clamp(44px,11.5vw,64px)}.section{padding-block:52px}.hero h2{font-size:21px}.section-heading h2,h2,.brand-intro-copy h2{font-size:30px}.benefit h3,.feature-card h3{font-size:24px}.hero-actions{flex-wrap:wrap}.quick-contact{bottom:10px}.inquiry-grid>.form-panel{order:0}}
+
+.admin-entry{display:inline-flex;align-items:center;justify-content:center;background:#f58220;border:2px solid #f58220;border-radius:10px;padding:10px 18px;color:#13354c!important;font-weight:700;margin-top:10px;min-height:44px}.admin-entry:hover{background:#ff9b45}
