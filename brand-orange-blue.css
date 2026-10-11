@@ -1,0 +1,25 @@
+/* Thanh Nhuệ: Arial, xanh Vina và cam. */
+:root{--sans:Arial,Helvetica,sans-serif;--serif:Arial,Helvetica,sans-serif;--blue:#0072bc;--orange:#f58220;--ink:#16425e;--plum:#0072bc;--deep:#00588f;--gold:#f58220;--muted:#43677e;--paper:#fff;--soft:#f0f8fd;--line:#c6e3f5;color-scheme:light}
+body,button,input,textarea,select,h1,h2,h3,h4,blockquote,strong,em,span,a,p,label,small,summary{font-family:Arial,Helvetica,sans-serif!important}
+body{background:#fff;color:var(--ink);line-height:1.75}
+h1,h2,h3,h4{font-weight:700!important;font-style:normal;letter-spacing:-.025em;overflow-wrap:break-word}
+h2{font-size:clamp(30px,3.3vw,44px);line-height:1.22}
+h3{line-height:1.35}em{font-style:normal!important;font-weight:700!important}
+header,.topbar{background:#0072bc}.hero{background:linear-gradient(120deg,#00588f 0%,#0072bc 78%,#f58220 160%);color:#fff}.hero:before,.hero:after{opacity:.15}
+.hero h1{font-size:clamp(48px,6.1vw,82px);font-weight:800!important;line-height:1.08;max-width:680px}
+.hero h1 em,.hero .eyebrow{color:#ffac64}.hero h2,.hero-description,.hero .text-link{color:#fff}.hero h2{font-size:clamp(20px,2vw,25px);font-weight:700!important;line-height:1.45}
+.hero-actions .button,.button,.form-panel .button{background:#f58220;color:#13354c;border-color:#f58220;font-weight:700;box-shadow:0 8px 24px #0072bc12}
+.button:hover,.hero-actions .button:hover{background:#ff9b45;border-color:#ff9b45;transform:translateY(-2px)}
+.eyebrow,.form-kicker,.tech-index,.number,.feature-card span,.feature-card b,.inquiry-copy h2 em,.brand-intro-copy h2 em{color:#0072bc;font-weight:700!important}
+.section{padding-block:80px}.section-heading{padding-bottom:24px;border-bottom:2px solid #c6e3f5}.section-heading h2,.inquiry-copy h2,.brand-intro-copy h2{color:#00588f}
+.benefit,.tech-card,.feature-card,.form-panel,.contact>div:last-child{border-color:#c6e3f5;box-shadow:0 8px 30px #0072bc08}.benefit,.tech-card,.feature-card{border-top:4px solid #f58220}
+.roadmap,.experiences,.inquiry-section{background:#f0f8fd}.solution,.tags span{background:#f0f8fd}.step>span{background:#0072bc;color:#fff;border-color:#0072bc;font-weight:700}
+.quote-band,footer{background:#00588f;color:#fff}.quote-band blockquote,.quote-band p,footer p,footer a,footer h3,footer span{color:#fff}.quote-band blockquote{font-weight:700;line-height:1.4}
+.quick-contact{background:#fff;border-color:#c6e3f5}.quick-contact .quick-register{background:#0072bc;color:#fff;border-color:#0072bc}.quick-contact a{background:#f58220;color:#13354c;border-color:#f58220;font-weight:700}
+.form-panel input,.form-panel textarea,.form-panel select,.portal-shell input,.portal-shell select,.portal-shell textarea{background:#fff;border-color:#a1cce7;color:#16425e}.form-panel label{font-weight:700}
+a.text-link,.contact-direct a,.brand-intro-copy .text-link{color:#0072bc}.hero a.text-link{color:#fff}
+.menu-toggle{color:#fff!important;border-color:#ffffff80!important}.nav nav{background:#0072bc}.nav nav a,.brand{color:#fff}
+.portrait-frame{border:3px solid #f58220}.portrait-caption strong,.portrait-caption span{color:#fff}.frame-label{color:#00588f;background:#fff}.brand-intro-photo figcaption{color:#fff}
+:focus-visible{outline:3px solid #f58220;outline-offset:4px}.form-panel input:focus,.form-panel textarea:focus{outline:2px solid #0072bc;outline-offset:2px}
+.primary{background:#0072bc;border-color:#0072bc;color:#fff}.message-error{color:#00588f;background:#fff0e3;border-left:4px solid #f58220}.message-success{color:#00588f;background:#f0f8fd;border-left:4px solid #0072bc}
+@media(max-width:760px){.hero h1{font-size:clamp(44px,11.5vw,64px)}.section{padding-block:52px}.hero h2{font-size:21px}.section-heading h2,h2,.brand-intro-copy h2{font-size:30px}.benefit h3,.feature-card h3{font-size:24px}.hero-actions{flex-wrap:wrap}.quick-contact{bottom:10px}.inquiry-grid>.form-panel{order:0}}
