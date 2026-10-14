@@ -40,3 +40,10 @@
 @keyframes roam-pig{0%,100%{transform:translate(80vw,18vh) rotate(-8deg)}15%{transform:translate(6vw,75vh) rotate(-20deg)}30%{transform:translate(75vw,75vh) rotate(10deg)}45%{transform:translate(75vw,12vh) rotate(-10deg)}60%{transform:translate(55vw,42vh) rotate(0)}65%{transform:translate(55vw,42vh) rotate(8deg)}80%{transform:translate(8vw,22vh) rotate(-12deg)}90%{transform:translate(80vw,82vh) rotate(12deg)}}
 @keyframes roam-scorpion{0%,100%{transform:translate(4vw,68vh) rotate(0)}28%{transform:translate(29vw,68vh) rotate(0)}34%{transform:translate(30vw,68vh) rotate(-65deg)}42%{transform:translate(25vw,48vh) rotate(-65deg)}55%{transform:translate(45vw,42vh) rotate(0)}60%{transform:translate(50vw,42vh) rotate(0)}65%{transform:translate(49vw,42vh) rotate(70deg)}78%{transform:translate(42vw,82vh) rotate(70deg)}90%{transform:translate(10vw,82vh) rotate(180deg)}}
 @media(max-width:700px){.roaming-scene{transform:none;inset:0;width:100%;height:100%}.roaming-scene .duel-actor{width:60px;height:72px}.roaming-scene .duel-scorpion{width:30px;height:25px}}
+
+/* Scorpions travel as one row; flying guests appear briefly every 5 seconds. */
+.roaming-scene .duel-scorpion{animation-delay:0s;animation-name:scorpion-row}.roaming-scene .scorpion-0{margin-left:0}.roaming-scene .scorpion-1{margin-left:48px}.roaming-scene .scorpion-2{margin-left:96px}
+.roaming-scene .duel-monkey{animation:roam-monkey 20s linear infinite,guest-appearance 5s linear infinite}.roaming-scene .duel-pig{animation:roam-pig 20s linear infinite,guest-appearance 5s linear infinite}
+@keyframes guest-appearance{0%,45%{opacity:1;visibility:visible}50%,99%{opacity:0;visibility:hidden}100%{opacity:1;visibility:visible}}
+@keyframes scorpion-row{0%,100%{transform:translate(3vw,80vh)}25%{transform:translate(65vw,80vh)}50%{transform:translate(65vw,58vh)}75%{transform:translate(3vw,58vh)}}
+@media(max-width:700px){.roaming-scene .scorpion-1{margin-left:33px}.roaming-scene .scorpion-2{margin-left:66px}}
